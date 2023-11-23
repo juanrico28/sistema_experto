@@ -16,7 +16,7 @@ inicio:-
 
 	new(Menu, dialog('Proyecto de diagnostico de fallos en vehiculos automotris', size(1000,800))),
 	new(L,label(nombre,'BIENVENIDOS A SU SISTEMA EXPERTO DE ATENCION A SU VEHICULO')),
-	new(A,label(nombre,'hecho por Cristian Camilo Sierra Nuñez, Daniel Camilo Alarcon Rodriguez, Juan Andres Rico Parra')),
+	new(A,label(nombre,'hecho por Cristian Camilo Sierra NuÃ±ez, Daniel Camilo Alarcon Rodriguez, Juan Andres Rico Parra')),
 	new(@texto,label(nombre,'Responde un breve cuestionario para resolver tu falla')),
 	new(@respl,label(nombre,'')),
 	new(Salir,button('SALIR',and(message(Menu, destroy),message(Menu,free)))),
@@ -51,10 +51,10 @@ fallas('realizar una alineacion y balanceo:
         para que alinien y balancen las llantas del auto'):-suspension,!.
 
 fallas('verificar el estado actual de la bateria:
-	primero abra el cofre y ubique la bateria del coche
-        verifique si estan bien conctados los cables, arranque
+	primero abra el capo y ubique la bateria del coche
+        verifique si estan bien conectados los cables, arranque
 	el coche, si no arranca entonces la bateria esta muerta
-	para esto recarguela pase corriente con otro coche,
+	para esto recarguela pase corriente con otro coche, pida ayuda al alguien que sepa,
 	en caso de no tener exito debera reemplazar la bateria'):-electronico,!.
 
 fallas('llego la hora de cambiar tus pastillas de freno:
@@ -82,26 +82,26 @@ fallas('seguro subes demaciado el volumen:
 	del auto si estan bien conectados los cables'):-sonido,!.
 
 fallas('bomba de combustible defectuosa:
-        El diagnóstico de un posible fallo en la bomba de combustible se fundamenta en una serie de indicadores clave.
-        Cuando un vehículo experimenta fallos intermitentes del motor, detenciones inesperadas durante la conducción o
-	pérdida de potencia al acelerar, estos síntomas pueden sugerir un problema con la bomba de combustible.
-        La verificación de ruidos inusuales cercanos al tanque de combustible y una posible tendencia del vehículo a
-	sobrecalentarse pueden ser señales adicionales de un mal funcionamiento de la bomba. Sin embargo, es crucial
-	realizar un diagnóstico exhaustivo mediante herramientas especializadas, así como inspecciones visuales, para
-	confirmar la condición de la bomba de combustible y determinar si requiere un reemplazo o mantenimiento adecuado
-	para restaurar el funcionamiento óptimo del sistema de combustible del vehículo.'):-bomba,!.
+        El diagnÃ³stico de un posible fallo en la bomba de combustible se fundamenta en una serie de indicadores clave.
+        Cuando un vehÃ­culo experimenta fallos intermitentes del motor, detenciones inesperadas durante la conducciÃ³n o
+	pÃ©rdida de potencia al acelerar, estos sÃ­ntomas pueden sugerir un problema con la bomba de combustible.
+        La verificaciÃ³n de ruidos inusuales cercanos al tanque de combustible y una posible tendencia del vehÃ­culo a
+	sobrecalentarse pueden ser seÃ±ales adicionales de un mal funcionamiento de la bomba. Sin embargo, es crucial
+	realizar un diagnÃ³stico exhaustivo mediante herramientas especializadas, asÃ­ como inspecciones visuales, para
+	confirmar la condiciÃ³n de la bomba de combustible y determinar si requiere un reemplazo o mantenimiento adecuado
+	para restaurar el funcionamiento Ã³ptimo del sistema de combustible del vehÃ­culo.'):-bomba,!.
 
-fallas('problema en la transmisión:
-        El diagnóstico de problemas en la transmisión de un automóvil implica una evaluación minuciosa de varios síntomas y
-	componentes. Cuando se presentan dificultades al cambiar de marcha, ruidos inusuales durante esta acción,
-	vibraciones o sacudidas durante la aceleración, fugas de líquido de transmisión visibles debajo del vehículo o
-	un comportamiento irregular al retroceder, estos indicios sugieren posibles inconvenientes en la transmisión.
+fallas('problema en la transmisiÃ³n:
+        El diagnÃ³stico de problemas en la transmisiÃ³n de un automÃ³vil implica una evaluaciÃ³n minuciosa de varios sÃ­ntomas y
+	componentes. Cuando se presentan dificultades al cambiar de marcha, ruidos inusuales durante esta acciÃ³n,
+	vibraciones o sacudidas durante la aceleraciÃ³n, fugas de lÃ­quido de transmisiÃ³n visibles debajo del vehÃ­culo o
+	un comportamiento irregular al retroceder, estos indicios sugieren posibles inconvenientes en la transmisiÃ³n.
 	Para abordar eficazmente estos problemas, se recomienda un enfoque paso a paso: verificar el nivel y la calidad
-	del líquido de transmisión, inspeccionar visualmente en busca de fugas y desgastes, y realizar una evaluación
-	profesional para diagnosticar y resolver la causa raíz del problema. Un mecánico especializado puede llevar a
-	cabo pruebas adicionales, como escaneo computarizado o pruebas de conducción, para identificar con precisión la
-	falla y realizar las reparaciones necesarias, que podrían incluir desde ajustes menores hasta reemplazos de
-	componentes clave, asegurando así un rendimiento óptimo y seguro de la transmisión del automóvil.'):-marcha,!.
+	del lÃ­quido de transmisiÃ³n, inspeccionar visualmente en busca de fugas y desgastes, y realizar una evaluaciÃ³n
+	profesional para diagnosticar y resolver la causa raÃ­z del problema. Un mecÃ¡nico especializado puede llevar a
+	cabo pruebas adicionales, como escaneo computarizado o pruebas de conducciÃ³n, para identificar con precisiÃ³n la
+	falla y realizar las reparaciones necesarias, que podrÃ­an incluir desde ajustes menores hasta reemplazos de
+	componentes clave, asegurando asÃ­ un rendimiento Ã³ptimo y seguro de la transmisiÃ³n del automÃ³vil.'):-marcha,!.
 
 
 fallas('Falla desconocida').
@@ -109,70 +109,70 @@ fallas('Falla desconocida').
 % preguntas para resolver las fallas con su respectivo identificador de
 % falla
 aceite:- cambio_aceite,
-	pregunta('¿Ha notado sonidos inusuales o vibraciones provenientes del motor últimamente?'),
-	pregunta('¿Tiene problemas para arrancar el vehiculo en frio?'),
-	pregunta('¿Su automovil gasta mas combustible de lo normal?'),
-	pregunta('¿Su motor se escucha muy ruidoso?'),
-	pregunta('¿Siente que su motor tiene menos fuerza?').
+	pregunta('Â¿Ha notado sonidos inusuales o vibraciones provenientes del motor Ãºltimamente?'),
+	pregunta('Â¿Tiene problemas para arrancar el vehiculo en frio?'),
+	pregunta('Â¿Su automovil gasta mas combustible de lo normal?'),
+	pregunta('Â¿Su motor se escucha muy ruidoso?'),
+	pregunta('Â¿Siente que su motor tiene menos fuerza?').
 
 suspension:- alineacion_direccion,
-	pregunta('¿Ha golpeado algún obstaculo (bache, anden) recientemente?'),
-	pregunta('¿Ha notado alguna llanta desgastada?'),
-	pregunta('¿Tiene su volante neutral y el auto gira?'),
-	pregunta('¿Ha realizado un viaje largo que haya afectado a la alineacion de las ruedas?'),
-	pregunta('¿Siente vibraciones o sacudidas inusuales al conducir a ciertas velocidades?').
+	pregunta('Â¿Ha golpeado algÃºn obstaculo (bache, anden) recientemente?'),
+	pregunta('Â¿Ha notado alguna llanta desgastada?'),
+	pregunta('Â¿Tiene su volante neutral y el auto gira?'),
+	pregunta('Â¿Ha realizado un viaje largo que haya afectado a la alineacion de las ruedas?'),
+	pregunta('Â¿Siente vibraciones o sacudidas inusuales al conducir a ciertas velocidades?').
 
 electronico:- bateria_agotada,
-	pregunta('¿Tiene problemas para arrancar el vehiculo en frio?'),
-	pregunta('¿Los faros titilan o encienden con poca intencidad?'),
-	pregunta('¿El radio no enciende?'),
-	pregunta('¿El auto emite un crack cuando es encendido?');
-	pregunta('¿El auto no enciende de ninguna forma?');
-	pregunta('¿El auto cuenta con suficiente energia?').
+	pregunta('Â¿Tiene problemas para arrancar el vehiculo en frio?'),
+	pregunta('Â¿Los faros titilan o encienden con poca intencidad?'),
+	pregunta('Â¿El radio no enciende?'),
+	pregunta('Â¿El auto emite un crack cuando es encendido?');
+	pregunta('Â¿El auto no enciende de ninguna forma?');
+	pregunta('Â¿El auto cuenta con suficiente energia?').
 
 frenos:- cambio_frenos,
-	pregunta('¿Ha golpeado algún obstaculo (bache, anden) recientemente?'),
-	pregunta('¿Ha notado alguna llanta desgastada?'),
-	pregunta('¿Siente que el pedal del freno se hunde más de lo habitual al presionarlo?'),
-        pregunta('¿Al frenar escucha chillidos agudos?');
-        pregunta('¿Al frenar siente que se el vehiculo tarda mas en frenar?').
+	pregunta('Â¿Ha golpeado algÃºn obstaculo (bache, anden) recientemente?'),
+	pregunta('Â¿Ha notado alguna llanta desgastada?'),
+	pregunta('Â¿Siente que el pedal del freno se hunde mÃ¡s de lo habitual al presionarlo?'),
+        pregunta('Â¿Al frenar escucha chillidos agudos?');
+        pregunta('Â¿Al frenar siente que se el vehiculo tarda mas en frenar?').
 
 computadora:- check_engine,
-	pregunta('¿Siente que su motor tiene menos fuerza?'),
-	pregunta('¿Ha notado algún olor extraño o ruidos inusuales prevenientes del motor?'),
-	pregunta('¿Ha revisado el estado del tapón del combustible (aflojado o apretado)?');
-	pregunta('¿la luz se mantiene encendida todo el tiempo en el tablero del auto?').
+	pregunta('Â¿Siente que su motor tiene menos fuerza?'),
+	pregunta('Â¿Ha notado algÃºn olor extraÃ±o o ruidos inusuales prevenientes del motor?'),
+	pregunta('Â¿Ha revisado el estado del tapÃ³n del combustible (aflojado o apretado)?');
+	pregunta('Â¿la luz se mantiene encendida todo el tiempo en el tablero del auto?').
 
 sonido:- cambio_bocina,
-	pregunta('¿Ha habido alguna situación de humedad o lluvia que podria haber afectado a las bocinas?'),
-	pregunta('¿En la bocina no se escucha ningun sonido?'),
-	pregunta('¿Ha revisado los fusibles y la conexión de las bocinas?'),
-	pregunta('¿Antes de que dejan de funcionar las bocinas escucho algún sonido extraño?');
-	pregunta('¿El auto cuenta con suficiente energia?').
+	pregunta('Â¿Ha habido alguna situaciÃ³n de humedad o lluvia que podria haber afectado a las bocinas?'),
+	pregunta('Â¿En la bocina no se escucha ningun sonido?'),
+	pregunta('Â¿Ha revisado los fusibles y la conexiÃ³n de las bocinas?'),
+	pregunta('Â¿Antes de que dejan de funcionar las bocinas escucho algÃºn sonido extraÃ±o?');
+	pregunta('Â¿El auto cuenta con suficiente energia?').
 
 bomba:- bombacombustible,
-	pregunta('¿Siente que su motor tiene menos fuerza?'),
-	pregunta('¿El carro se sobrecalienta con frecuencia?'),
-	pregunta('Ha verificado si hay ruidos extraños cerca del tanque de combustible?');
-	pregunta('¿El carro se detiene inesperadamente mientras conduce?').
+	pregunta('Â¿Siente que su motor tiene menos fuerza?'),
+	pregunta('Â¿El carro se sobrecalienta con frecuencia?'),
+	pregunta('Ha verificado si hay ruidos extraÃ±os cerca del tanque de combustible?');
+	pregunta('Â¿El carro se detiene inesperadamente mientras conduce?').
 
 marcha:- problema_marcha,
-	pregunta('¿El indicador de check engine o de transmision se encendio en el tablero del vehiculo?'),
-	pregunta('¿Se escuchan ruidos extraños al cambiar de marcha?'),
-	pregunta('¿Ha notado fugas de líquido de transmisión debajo del automóvil?');
-	pregunta('¿El vehículo retrocede de manera brusca o tarda en hacerlo al cambiar de dirección?').
+	pregunta('Â¿El indicador de check engine o de transmision se encendio en el tablero del vehiculo?'),
+	pregunta('Â¿Se escuchan ruidos extraÃ±os al cambiar de marcha?'),
+	pregunta('Â¿Ha notado fugas de lÃ­quido de transmisiÃ³n debajo del automÃ³vil?');
+	pregunta('Â¿El vehÃ­culo retrocede de manera brusca o tarda en hacerlo al cambiar de direcciÃ³n?').
 
 
 %identificador de falla que dirige a las preguntas correspondientes
 
-cambio_aceite:-pregunta('¿Ha encendido el indicador de advertencia de aceite en el tablero del vehículo?'),!.
-alineacion_direccion:-pregunta('¿Ha notado que el carro tiende a desviarse hacia un lado mientras conduce en línea recta?'),!.
-bateria_agotada:-pregunta('¿tiene problemas electricos?'),!.
-cambio_frenos:-pregunta('¿tiene problema al frenar?'),!.
-cambio_bocina:-pregunta('¿Presenta problemas con las bocinas?'),!.
-check_engine:-pregunta('¿la luz check engine se encendio en el tablero del vehiculo?'),!.
-bombacombustible:-pregunta('¿Ha experimentado fallos intermitentes del motor?'),!.
-problema_marcha:-pregunta('¿La transmisión presenta dificultades al cambiar de marcha?'),!.
+cambio_aceite:-pregunta('Â¿Ha encendido el indicador de advertencia de aceite en el tablero del vehÃ­culo?'),!.
+alineacion_direccion:-pregunta('Â¿Ha notado que el carro tiende a desviarse hacia un lado mientras conduce en lÃ­nea recta?'),!.
+bateria_agotada:-pregunta('Â¿tiene problemas electricos?'),!.
+cambio_frenos:-pregunta('Â¿tiene problema al frenar?'),!.
+cambio_bocina:-pregunta('Â¿Presenta problemas con las bocinas?'),!.
+check_engine:-pregunta('Â¿la luz check engine se encendio en el tablero del vehiculo?'),!.
+bombacombustible:-pregunta('Â¿Ha experimentado fallos intermitentes del motor?'),!.
+problema_marcha:-pregunta('Â¿La transmisiÃ³n presenta dificultades al cambiar de marcha?'),!.
 
 /* MOTOR DE INFERENCIA: Esta parte del sistema experto se encarga de
  inferir cual es el diagnostico a partir de las preguntas realizadas
